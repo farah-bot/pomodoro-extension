@@ -1,0 +1,197 @@
+:root {
+  --primary-color: #d45735;
+  --white: #fcf7f4;
+  --black: #232323;
+  --disabled: #8c8c8c;
+  --progress-bar-inactive: #d8d1d1;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #f9f9f9;
+}
+
+.pomodoro-container {
+  background-color: #fff;
+  width: 100%;
+  max-width: 450px;
+  overflow: hidden;
+}
+
+.header-nav {
+  display: flex;
+  width: 100%;
+  padding: 12px 16px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.brand-icon {
+  width: 25px;
+  height: 24px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+}
+
+.brand-name {
+  color: var(--black);
+  font: 700 16px "Roboto", sans-serif;
+}
+
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-icon {
+  font-size: 20px;
+  color: var(--black);
+}
+
+.progress-section {
+  display: flex;
+  padding: 15px 16px;
+  justify-content: center;
+}
+
+.progress-track {
+  display: flex;
+  align-items: center;
+  width: 240px;
+  gap: 20px;
+}
+
+.progress-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--progress-bar-inactive);
+}
+
+.progress-connector {
+  flex: 1;
+  height: 2px;
+  background-color: var(--progress-bar-inactive);
+}
+
+.timer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 16px;
+}
+
+.timer-display {
+  text-align: center;
+}
+
+.timer-status {
+  color: var(--disabled);
+  margin-bottom: 8px;
+  font: 500 18px "Roboto", sans-serif;
+}
+
+.timer-clock {
+  color: var(--disabled);
+  font: 700 42px "Roboto", sans-serif;
+}
+
+.timer-button {
+  width: 100%;
+  margin-top: 24px;
+  padding: 11px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font: 16px "Roboto", sans-serif;
+}
+
+.timer-button:hover {
+  background-color: #e04421;
+}
+
+.settings-section {
+  padding: 20px 16px;
+}
+
+.settings-header {
+  margin-bottom: 16px;
+}
+
+.settings-title {
+  color: var(--black);
+  font: 500 20px "Roboto", sans-serif;
+}
+
+.settings-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.settings-inputs input {
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.settings-inputs button {
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.session-info {
+  padding: 16px;
+}
+
+.session-count {
+  color: var(--black);
+  font: 500 16px "Roboto", sans-serif;
+}
+
+@media (max-width: 640px) {
+  .pomodoro-container {
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  .progress-track {
+    width: 100%;
+  }
+
+  .progress-section {
+    padding: 10px 8px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
