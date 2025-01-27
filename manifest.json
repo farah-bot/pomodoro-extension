@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Pomodoro Timer",
+  "version": "1.0",
+  "description": "Pomodoro timer",
+  "permissions": [
+    "storage",
+    "notifications"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/tomat.png",
+      "48": "icons/tomat.png",
+      "128": "icons/tomat.png"
+    }
+  },
+  "icons": {
+    "16": "icons/tomat.png",
+    "48": "icons/tomat.png",
+    "128": "icons/tomat.png"
+  },
+  "storage": {
+    "hosted_app": false
+  }
+}
